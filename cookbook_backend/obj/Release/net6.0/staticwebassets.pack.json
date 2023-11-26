@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/filizsalnur/Documents/BLM4531/cookbook_backend/cookbook_backend/obj/Release/net6.0/scopedcss/projectbundle/cookbook_backend.bundle.scp.css",
+      "PackagePath": "staticwebassets/cookbook_backend.bundle.scp.css"
+    },
+    {
+      "Id": "obj/Release/net6.0/staticwebassets/msbuild.build.cookbook_backend.props",
+      "PackagePath": "build\\cookbook_backend.props"
+    },
+    {
+      "Id": "obj/Release/net6.0/staticwebassets/msbuild.buildMultiTargeting.cookbook_backend.props",
+      "PackagePath": "buildMultiTargeting\\cookbook_backend.props"
+    },
+    {
+      "Id": "obj/Release/net6.0/staticwebassets/msbuild.buildTransitive.cookbook_backend.props",
+      "PackagePath": "buildTransitive\\cookbook_backend.props"
+    },
+    {
+      "Id": "obj/Release/net6.0/staticwebassets/msbuild.cookbook_backend.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -6,9 +6,9 @@ using Cookbook.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.Configure<AddressesDatabaseSettings>(builder.Configuration.GetSection("AddressesDatabaseSettings"));
-builder.Services.Configure<UserDatabaseSettings>(builder.Configuration.GetSection("UserDatabaseSettings"));
-builder.Services.Configure<RecipeDatabaseSettings>(builder.Configuration.GetSection("RecipeDatabaseSettings"));
-
+builder.Services.Configure<UsersDatabaseSettings>(builder.Configuration.GetSection("UsersDatabaseSettings"));
+builder.Services.Configure<RecipesDatabaseSettings>(builder.Configuration.GetSection("RecipesDatabaseSettings"));
+builder.Services.AddRazorPages();
 
 builder.Services.AddSingleton<AddressesService>();
 builder.Services.AddSingleton<UserService>();
@@ -16,7 +16,7 @@ builder.Services.AddSingleton<RecipeService>();
 var app = builder.Build();
 
 
-app.MapGet("/", () => "Address API");
+
 
 
 app.MapGet("/api/Address", async (AddressesService addressesService) => await addressesService.Get());
@@ -58,7 +58,7 @@ app.MapDelete("/api/Address/{id}", async (AddressesService addressesService, str
     return Results.NoContent();
 });
 
-// Users Endpoint
+// Kullanıcı Endpointleri
 app.MapGet("/api/User", async (UserService userService) => await userService.GetUsers());
 app.MapGet("/api/User/{id}", async (UserService userService, string id) =>
 {
@@ -90,8 +90,7 @@ app.MapDelete("/api/User/{id}", async (UserService userService, string id) =>
     return Results.NoContent();
 });
 
-
-// Recipes Endpoint
+// Tarif Endpointleri
 app.MapGet("/api/Recipe", async (RecipeService recipeService) => await recipeService.GetRecipes());
 app.MapGet("/api/Recipe/{id}", async (RecipeService recipeService, string id) =>
 {
@@ -123,5 +122,7 @@ app.MapDelete("/api/Recipe/{id}", async (RecipeService recipeService, string id)
     return Results.NoContent();
 });
 
+
+app.MapRazorPages();
 
 app.Run();

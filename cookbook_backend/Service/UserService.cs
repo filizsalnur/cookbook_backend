@@ -10,12 +10,12 @@ namespace Cookbook.Service
     {
         private readonly IMongoCollection<User> _users;
 
-        public UserService(IOptions<UserDatabaseSettings> options)
+        public UserService(IOptions<UsersDatabaseSettings> options)
         {
             var mongoClient = new MongoClient(options.Value.ConnectionString);
 
             _users = mongoClient.GetDatabase(options.Value.DatabaseName)
-                .GetCollection<User>(options.Value.UserCollectionName);
+                .GetCollection<User>(options.Value.UsersCollectionName);
         }
 
         public async Task<List<User>> GetUsers() =>

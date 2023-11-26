@@ -1,11 +1,46 @@
 {
   "Version": 1,
-  "Hash": "hQsIw4DJydFAy0lrWrtgwRAyi0Qz13i8bArvfbAAVZw=",
+  "Hash": "AdrC8MVMYARiIil195wb/kAdPJ8aQxLu3U6FGvnVGHk=",
   "Source": "cookbook_backend",
   "BasePath": "_content/cookbook_backend",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [
+    {
+      "Identity": "/Users/filizsalnur/Documents/BLM4531/cookbook_backend/cookbook_backend/obj/Release/net6.0/scopedcss/bundle/cookbook_backend.styles.css",
+      "SourceId": "cookbook_backend",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/filizsalnur/Documents/BLM4531/cookbook_backend/cookbook_backend/obj/Release/net6.0/scopedcss/bundle/",
+      "BasePath": "_content/cookbook_backend",
+      "RelativePath": "cookbook_backend.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/filizsalnur/Documents/BLM4531/cookbook_backend/cookbook_backend/obj/Release/net6.0/scopedcss/bundle/cookbook_backend.styles.css"
+    },
+    {
+      "Identity": "/Users/filizsalnur/Documents/BLM4531/cookbook_backend/cookbook_backend/obj/Release/net6.0/scopedcss/projectbundle/cookbook_backend.bundle.scp.css",
+      "SourceId": "cookbook_backend",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/filizsalnur/Documents/BLM4531/cookbook_backend/cookbook_backend/obj/Release/net6.0/scopedcss/projectbundle/",
+      "BasePath": "_content/cookbook_backend",
+      "RelativePath": "cookbook_backend.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/filizsalnur/Documents/BLM4531/cookbook_backend/cookbook_backend/obj/Release/net6.0/scopedcss/projectbundle/cookbook_backend.bundle.scp.css"
+    }
+  ]
 }

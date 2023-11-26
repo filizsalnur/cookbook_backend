@@ -6,16 +6,16 @@
         public string DatabaseName { get; set; } = string.Empty;
         public string AddressesCollectionName { get; set; } = string.Empty;
     }
-    public class UserDatabaseSettings
+    public class UsersDatabaseSettings
     {
         public string ConnectionString { get; set; } = string.Empty;
         public string DatabaseName { get; set; } = string.Empty;
-        public string UserCollectionName { get; set; } = string.Empty;
+        public string UsersCollectionName { get; set; } = string.Empty;
     }
-    public class RecipeDatabaseSettings
+    public class RecipesDatabaseSettings
     {
         public string ConnectionString { get; set; } = string.Empty;
         public string DatabaseName { get; set; } = string.Empty;
-        public string RecipeCollectionName { get; set; } = string.Empty;
+        public string RecipesCollectionName { get; set; } = string.Empty;
     }
 }

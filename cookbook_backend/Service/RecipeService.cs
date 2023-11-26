@@ -1,4 +1,5 @@
-﻿using Cookbook.Data;
+﻿using AdressAPI.Data;
+using Cookbook.Data;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using System.Collections.Generic;
@@ -10,12 +11,12 @@ namespace Cookbook.Service
     {
         private readonly IMongoCollection<Recipe> _recipes;
 
-        public RecipeService(IOptions<RecipeDatabaseSettings> options)
+        public RecipeService(IOptions<RecipesDatabaseSettings> options)
         {
             var mongoClient = new MongoClient(options.Value.ConnectionString);
 
             _recipes = mongoClient.GetDatabase(options.Value.DatabaseName)
-                .GetCollection<Recipe>(options.Value.RecipeCollectionName);
+                .GetCollection<Recipe>(options.Value.RecipesCollectionName);
         }
 
         public async Task<List<Recipe>> GetRecipes() =>

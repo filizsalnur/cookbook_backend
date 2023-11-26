@@ -38,3 +38,13 @@
 /Users/filizsalnur/Documents/BLM4531/cookbook_backend/cookbook_backend/obj/Release/net6.0/cookbook_backend.pdb
 /Users/filizsalnur/Documents/BLM4531/cookbook_backend/cookbook_backend/obj/Release/net6.0/cookbook_backend.genruntimeconfig.cache
 /Users/filizsalnur/Documents/BLM4531/cookbook_backend/cookbook_backend/obj/Release/net6.0/ref/cookbook_backend.dll
+/Users/filizsalnur/Documents/BLM4531/cookbook_backend/cookbook_backend/bin/Release/net6.0/cookbook_backend.staticwebassets.runtime.json
+/Users/filizsalnur/Documents/BLM4531/cookbook_backend/cookbook_backend/obj/Release/net6.0/cookbook_backend.RazorAssemblyInfo.cache
+/Users/filizsalnur/Documents/BLM4531/cookbook_backend/cookbook_backend/obj/Release/net6.0/cookbook_backend.RazorAssemblyInfo.cs
+/Users/filizsalnur/Documents/BLM4531/cookbook_backend/cookbook_backend/obj/Release/net6.0/scopedcss/Pages/Shared/_Layout.cshtml.rz.scp.css
+/Users/filizsalnur/Documents/BLM4531/cookbook_backend/cookbook_backend/obj/Release/net6.0/scopedcss/projectbundle/cookbook_backend.bundle.scp.css
+/Users/filizsalnur/Documents/BLM4531/cookbook_backend/cookbook_backend/bin/Release/net6.0/Microsoft.OpenApi.dll
+/Users/filizsalnur/Documents/BLM4531/cookbook_backend/cookbook_backend/bin/Release/net6.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/filizsalnur/Documents/BLM4531/cookbook_backend/cookbook_backend/bin/Release/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/filizsalnur/Documents/BLM4531/cookbook_backend/cookbook_backend/bin/Release/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/filizsalnur/Documents/BLM4531/cookbook_backend/cookbook_backend/obj/Release/net6.0/cookbook_backend.MvcApplicationPartsAssemblyInfo.cs
