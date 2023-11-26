@@ -1,0 +1,64 @@
+﻿@page
+@model LoginModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+         
+            margin: 0;
+        }
+    
+        form {
+            width: 300px; 
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Login</h1>
+    <div class="container">
+
+
+        <form method="post">
+            <label asp-for="Input.Username"></label>
+            <input asp-for="Input.Username" />
+            <span asp-validation-for="Input.Username"></span>
+
+            <label asp-for="Input.Password"></label>
+            <input asp-for="Input.Password" />
+            <span asp-validation-for="Input.Password"></span>
+
+            <button type="submit">Login</button>
+        </form>
+
+
+    </div>
+
+</body>
+</html>

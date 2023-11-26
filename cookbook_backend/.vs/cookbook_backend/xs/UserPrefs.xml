@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{65D4172D-C944-4206-9999-C358FD0E0E8F}|MoviesAPI">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+    <Files>
+      <File FileName="Data/AddressService.cs" />
+      <File FileName="Program.cs" Line="18" Column="1" />
+      <File FileName="appsettings.json" />
+      <File FileName="Data/Address.cs" />
+      <File FileName="Data/Recipe.cs" />
+      <File FileName="Service/UserService.cs" />
+      <File FileName="Service/RecipeService.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="cookbook_backend" expanded="True">
+            <Node name="cookbook_backend" expanded="True">
+              <Node name="Data" expanded="True" />
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.cookbook__backend PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
+</Properties>
