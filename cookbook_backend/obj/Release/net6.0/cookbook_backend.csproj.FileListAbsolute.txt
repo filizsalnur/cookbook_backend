@@ -48,3 +48,4 @@
 /Users/filizsalnur/Documents/BLM4531/cookbook_backend/cookbook_backend/bin/Release/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /Users/filizsalnur/Documents/BLM4531/cookbook_backend/cookbook_backend/bin/Release/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll
 /Users/filizsalnur/Documents/BLM4531/cookbook_backend/cookbook_backend/obj/Release/net6.0/cookbook_backend.MvcApplicationPartsAssemblyInfo.cs
+/Users/filizsalnur/Documents/BLM4531/cookbook_backend/cookbook_backend/bin/Release/net6.0/BCrypt.Net.dll

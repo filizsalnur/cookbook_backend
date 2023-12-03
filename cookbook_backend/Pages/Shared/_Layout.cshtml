@@ -7,28 +7,43 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/cookbook_backend.styles.css" asp-append-version="true" />
+    <style>
+        body {
+            padding-top:60px;
+            padding-bottom:30px;
+        }
+
+        header{
+            position: fixed;
+            top: 0;
+            height: 50px;
+            width: 100%;
+      
+            text-align: center;
+            background-color: #f8f9fa;
+        }
+
+        footer.footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height:20px;
+            background-color: #f8f9fa;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .footer_text {
+            z-index: 1000;
+           
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">cookbook_backend</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <navbar >
+            <div>mddkkdkd</div>
+            
+        </navbar>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
@@ -37,8 +52,8 @@
     </div>
 
     <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - cookbook_backend - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        <div class="footer_text">
+            &copy; 2023 - cookbook_backend - Filiz Salnur
         </div>
     </footer>
 

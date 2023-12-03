@@ -9,13 +9,15 @@ namespace Cookbook.Service
     public class UserService
     {
         private readonly IMongoCollection<User> _users;
+        private readonly RecipeService _recipeService;
 
-        public UserService(IOptions<UsersDatabaseSettings> options)
+        public UserService(IOptions<UsersDatabaseSettings> options, RecipeService recipeService)
         {
             var mongoClient = new MongoClient(options.Value.ConnectionString);
-
             _users = mongoClient.GetDatabase(options.Value.DatabaseName)
                 .GetCollection<User>(options.Value.UsersCollectionName);
+
+            _recipeService = recipeService;
         }
 
         public async Task<List<User>> GetUsers() =>
@@ -24,14 +26,25 @@ namespace Cookbook.Service
         public async Task<User> GetUser(string userId) =>
             await _users.Find(u => u.Id == userId).FirstOrDefaultAsync();
 
-        public async Task CreateUser(User newUser) =>
+        public async Task CreateUser(User newUser, string password)
+        {
+            newUser.Password = password;
+
+            foreach (var recipe in newUser.Recipes)
+            {
+                await _recipeService.CreateRecipe(recipe);
+            }
+
             await _users.InsertOneAsync(newUser);
+        }
 
         public async Task AddRecipeToUser(string userId, Recipe newRecipe)
         {
             var userFilter = Builders<User>.Filter.Eq(u => u.Id, userId);
             var update = Builders<User>.Update.Push(u => u.Recipes, newRecipe);
             await _users.UpdateOneAsync(userFilter, update);
+
+            await _recipeService.CreateRecipe(newRecipe);
         }
 
         public async Task UpdateUser(string userId, User updatedUser) =>
@@ -39,5 +52,13 @@ namespace Cookbook.Service
 
         public async Task RemoveUser(string userId) =>
             await _users.DeleteOneAsync(u => u.Id == userId);
+
+        public async Task<User> GetUserByEmail(string email) =>
+           await _users.Find(u => u.Email == email).FirstOrDefaultAsync();
+
+        public bool VerifyPassword(User user, string password)
+        {
+            return user.Password == password;
+        }
     }
 }
