@@ -4,6 +4,7 @@ using Cookbook.Service;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.Configure<UsersDatabaseSettings>(builder.Configuration.GetSection("UsersDatabaseSettings"));
 builder.Services.Configure<RecipesDatabaseSettings>(builder.Configuration.GetSection("RecipesDatabaseSettings"));
+
 builder.Services.AddRazorPages();
 
 builder.Services.AddSingleton<UserService>();
