@@ -29,8 +29,24 @@ namespace Cookbook.Service
         public async Task<Recipe> GetRecipe(string recipeId) =>
             await _recipes.Find(r => r.Id == recipeId).FirstOrDefaultAsync();
 
-        public async Task CreateRecipe(Recipe newRecipe) =>
+        public async Task CreateRecipe(Recipe newRecipe, string userId)
+        {
+            newRecipe.UserId = userId;
+
+
+            var user = await _users.Find(u => u.Id == userId).FirstOrDefaultAsync();
+            if (user != null)
+            {
+                newRecipe.UserName = user.UserName;
+            }
+
             await _recipes.InsertOneAsync(newRecipe);
+
+    
+            var userFilter = Builders<User>.Filter.Eq(u => u.Id, userId);
+            var update = Builders<User>.Update.Push(u => u.Recipes, newRecipe);
+            await _users.UpdateOneAsync(userFilter, update);
+        }
 
         public async Task UpdateRecipe(string recipeId, Recipe updatedRecipe) =>
             await _recipes.ReplaceOneAsync(r => r.Id == recipeId, updatedRecipe);

@@ -45,18 +45,18 @@ namespace Cookbook.Pages
             {
                 return NotFound();
             }
+            var user = await _userService.GetUser(recipe.UserId);
 
-            var (userName, userId) = await _userService.GetUserByRecipeId(id);
-
-            if (userName != null)
+            if (user.UserName != null)
             {
-                RecipeOwnerUsername = userName; 
+                RecipeOwnerUsername = user.UserName;
             }
             else
             {
                 RecipeOwnerUsername = "Unknown";
             }
-    
+
+
             return Page();
         }
 

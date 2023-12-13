@@ -41,7 +41,7 @@ namespace cookbook_backend.Pages.Shared
     var isPasswordValid = _userService.VerifyPassword(existingUser, Input.Password);
     if (isPasswordValid)
     {
-        return RedirectToPage("/Index");
+        return RedirectToPage("/Recipes");
     }
     else
     {

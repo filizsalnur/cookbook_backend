@@ -1,12 +1,15 @@
-﻿@page
-@model Cookbook.Pages.RecipesModel
+﻿@page "{id}"
+@model Cookbook.Pages.RecipeDetailsModel
 @{
-    ViewData["Title"] = "Recipes";
+    ViewData["Title"] = "Recipe Details";
 }
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
     <style>
         body {
             margin: 0;
@@ -16,14 +19,18 @@
             line-height: 1.6rem;
             background-image: linear-gradient(45deg, #7c9885, #b5b682);
             min-height: 100vh;
-            text-align: center; 
+            text-align: center;
+            color: white;
         }
 
         h2 {
             margin-bottom: 24px;
             font-family: "Bebas Neue", cursive;
             font-size: 4rem;
-            color: white;
+        }
+
+        p {
+            color: black;
         }
 
         .articles {
@@ -45,7 +52,7 @@
         }
 
         .article-wrapper {
-            display: grid;
+            display: flex;
             grid-template-columns: 100px 1fr;
             gap: 16px;
         }
@@ -53,7 +60,8 @@
         .article-body {
             padding: 24px;
             min-width: 400px;
-            text-align: left; /* İçeriğin sola hizalanması */
+            text-align: center; /* İçeriğin ortalanması */
+            margin: auto; /* İçeriğin dikeyde ortalanması */
         }
 
         article a::after {
@@ -78,6 +86,7 @@
             transform-origin: center;
             transform: scale(1.001);
             transition: transform 0.4s ease-in-out;
+            border-radius: 16px 16px 0 0;
         }
 
         article a {
@@ -95,7 +104,6 @@
                 min-width: 24px;
                 width: 24px;
                 height: 24px;
-                margin-left: 5px;
                 transform: translateX(-20px);
                 opacity: 0;
                 transition: all 0.3s;
@@ -120,29 +128,19 @@
     </style>
 </head>
 <body>
-    
-    <h2>Recipes</h2>
 
-    <div class="articles">
-        @foreach (var recipe in Model.Recipes)
-        {
-            <article>
-                <div class="article-wrapper">
-                
-                    <div class="article-body">
-                        <h2>@recipe.Title</h2>
-             
-                        <p>Recipe Owner: @recipe.UserName</p>
-                        <a href="@Url.Page("RecipeDetails", new { id = recipe.Id })" class="read-more">
-                            Read more <span class="sr-only">about @recipe.Title</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </article>
-        }
-    </div>
+    <h2>Recipe Details</h2>
+
+    <article>
+        <div class="article-wrapper">
+            <div class="article-body">
+                <h2>@Model.Recipe.Title</h2>
+                <p>@Model.Recipe.Description</p>
+                <p>Recipe Owner: @Model.Recipe.UserName</p>
+            </div>
+        </div>
+    </article>
+
+    <a href="@Url.Page("Recipes")">Back to Recipes</a>
 </body>
 </html>

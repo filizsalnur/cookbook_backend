@@ -9,5 +9,10 @@ namespace Cookbook.Data
         public string Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
+
+        [BsonRepresentation(MongoDB.Bson.BsonType.ObjectId)]
+        public string UserId { get; set; }
+
+        public string UserName { get; set; }
     }
 }

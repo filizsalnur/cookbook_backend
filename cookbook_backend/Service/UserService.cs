@@ -32,7 +32,7 @@ namespace Cookbook.Service
 
             foreach (var recipe in newUser.Recipes)
             {
-                await _recipeService.CreateRecipe(recipe);
+                await _recipeService.CreateRecipe(recipe,newUser.Id);
             }
 
             await _users.InsertOneAsync(newUser);
@@ -44,7 +44,7 @@ namespace Cookbook.Service
             var update = Builders<User>.Update.Push(u => u.Recipes, newRecipe);
             await _users.UpdateOneAsync(userFilter, update);
 
-            await _recipeService.CreateRecipe(newRecipe);
+            await _recipeService.CreateRecipe(newRecipe, userId);
         }
 
         public async Task UpdateUser(string userId, User updatedUser) =>

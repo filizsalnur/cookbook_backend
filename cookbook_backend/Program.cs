@@ -1,5 +1,6 @@
 using Cookbook.Data;
 using Cookbook.Service;
+using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.Configure<UsersDatabaseSettings>(builder.Configuration.GetSection("UsersDatabaseSettings"));
@@ -53,9 +54,14 @@ app.MapGet("/api/Recipe/{id}", async (RecipeService recipeService, string id) =>
     var recipe = await recipeService.GetRecipe(id);
     return recipe is null ? Results.NotFound() : Results.Ok(recipe);
 });
-app.MapPost("/api/Recipe", async (RecipeService recipeService, Recipe newRecipe) =>
+app.MapPost("/api/Recipe", async (RecipeService recipeService, [FromBody] Recipe newRecipe) =>
 {
-    await recipeService.CreateRecipe(newRecipe);
+    if (string.IsNullOrEmpty(newRecipe?.UserId))
+    {
+        return Results.BadRequest("UserId is required in the request body.");
+    }
+
+    await recipeService.CreateRecipe(newRecipe, newRecipe.UserId);
     return Results.Ok();
 });
 app.MapPut("/api/Recipe/{id}", async (RecipeService recipeService, string id, Recipe updatedRecipe) =>
