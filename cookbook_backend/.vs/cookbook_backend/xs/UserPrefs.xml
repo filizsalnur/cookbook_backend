@@ -1,17 +1,11 @@
 ﻿<Properties StartupConfiguration="{65D4172D-C944-4206-9999-C358FD0E0E8F}|MoviesAPI">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Service/RecipeService.cs">
     <Files>
       <File FileName="Program.cs" Line="18" Column="48" />
       <File FileName="appsettings.json" />
       <File FileName="Data/Recipe.cs" />
       <File FileName="Service/UserService.cs" />
-      <File FileName="Service/RecipeService.cs" />
+      <File FileName="Service/RecipeService.cs" Line="35" Column="6" />
       <File FileName="Pages/Index.cshtml" />
       <File FileName="Data/DatabaseSettings.cs" />
       <File FileName="Data/User.cs" />
@@ -21,16 +15,33 @@
       <File FileName="Pages/Register.cshtml" />
       <File FileName="Pages/Shared/_Layout.cshtml" />
       <File FileName="Pages/Index.cshtml.cs" />
+      <File FileName="Pages/Error.cshtml" />
+      <File FileName="Pages/Error.cshtml.cs" />
+      <File FileName="Pages/_ViewStart.cshtml" Line="1" Column="1" />
+      <File FileName="Pages/_ViewImports.cshtml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="cookbook_backend">
-            <Node name="cookbook_backend" selected="True" />
+            <Node name="cookbook_backend">
+              <Node name="Pages" expanded="True">
+                <Node name="Error.cshtml" expanded="True" />
+                <Node name="Login.cshtml" expanded="True" />
+              </Node>
+              <Node name="Properties" expanded="True" />
+              <Node name="Service" expanded="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.cookbook__backend PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

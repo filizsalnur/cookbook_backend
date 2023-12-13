@@ -60,5 +60,31 @@ namespace Cookbook.Service
         {
             return user.Password == password;
         }
+
+        public async Task<(string UserName, string UserId)> GetUserByRecipeId(string recipeId)
+        {
+            try
+            {
+                Console.WriteLine($"Searching for user with recipeId: {recipeId}");
+
+                var user = await _users.Find(u => u.Recipes.Any(r => r.Id == recipeId)).FirstOrDefaultAsync();
+
+                if (user != null)
+                {
+                    Console.WriteLine($"Found user: {user.UserName}, {user.Id}");
+                    return (user.UserName, user.Id);
+                }
+                else
+                {
+                    Console.WriteLine("User not found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception: {ex.Message}");
+            }
+
+            return (null, null);
+        }
     }
 }
