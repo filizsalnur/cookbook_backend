@@ -32,6 +32,27 @@ This backend project was developed for the BLM_4519 course at Ankara University.
   "MealType": "Kebab - Skewer"
 }
 ```
+
+## Getting Started
+
+To run the backend locally, follow these steps:
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/filizsalnur/cookbook_backend.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd cookbook_backend
+   ```
+
+3. Run the backend application.
+
+Now, the backend server should be up and running, and you can start using the API endpoints to manage users and recipes for the Cookbook Mobile App.
+```
+
+Feel free to adjust or add any additional information as needed.
 ### Get All Users
 **Endpoint:** `GET http://localhost:5003/api/User`
 
