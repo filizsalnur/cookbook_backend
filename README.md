@@ -33,6 +33,12 @@ This backend project was developed for the BLM_4519 course at Ankara University.
 }
 ```
 
+### Get All Users
+**Endpoint:** `GET http://localhost:5003/api/User`
+
+### Get All Recipes
+**Endpoint:**  `GET http://localhost:5003/api/Recipe`
+
 ## Getting Started
 
 To run the backend locally, follow these steps:
@@ -50,11 +56,4 @@ To run the backend locally, follow these steps:
 3. Run the backend application.
 
 Now, the backend server should be up and running, and you can start using the API endpoints to manage users and recipes for the Cookbook Mobile App.
-```
 
-Feel free to adjust or add any additional information as needed.
-### Get All Users
-**Endpoint:** `GET http://localhost:5003/api/User`
-
-### Get All Recipes
-**Endpoint:**  `GET http://localhost:5003/api/Recipe`
