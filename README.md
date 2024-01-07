@@ -1,6 +1,6 @@
 # Cookbook Backend
 
-This backend project was developed for the BLM_4519 course at Ankara University. It serves as the .NET backend for a recipe management system. The associated Flutter project for the mobile application can be found [here](https://github.com/filizsalnur/cookbook_mobile).
+This backend project was developed for the BLM_4531 course at Ankara University. It serves as the .NET backend for a recipe management system. The associated Flutter project for the mobile application can be found [here](https://github.com/filizsalnur/cookbook_mobile).
 
 ## Recipes Page
 ![Recipes Page](https://github.com/filizsalnur/cookbook_backend/assets/92436947/e28a692f-7109-4d3c-ad83-a313e396986e)
